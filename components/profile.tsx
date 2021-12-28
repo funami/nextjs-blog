@@ -1,6 +1,6 @@
 import useSWR from "swr";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url: RequestInfo) => fetch(url).then((res) => res.json());
 
 export default function Profile() {
   const { data, error } = useSWR(
